@@ -4,7 +4,7 @@ class CreateBlogs < ActiveRecord::Migration[6.0]
       t.string :title
       t.text :body
 
-      t.timestamps
+      t.timestamps # know when you created the blog
     end
   end
 end
