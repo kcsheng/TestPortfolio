@@ -4,21 +4,21 @@ class BlogsController < ApplicationController
   # GET /blogs
   # GET /blogs.json
   def index
-    @blogs = Blog.all
+    @blogs = Blog.all # This is the index action, also tried limit(1)
   end
 
   # GET /blogs/1
   # GET /blogs/1.json
-  def show
+  def show # it is in before action, links to the set_blog call for dry code, central organisation in case there is a change
   end
 
   # GET /blogs/new
-  def new
+  def new # makes the form available for create
     @blog = Blog.new
   end
 
   # GET /blogs/1/edit
-  def edit
+  def edit # makes the form available for update
   end
 
   # POST /blogs
@@ -28,11 +28,10 @@ class BlogsController < ApplicationController
 
     respond_to do |format|
       if @blog.save
-        format.html { redirect_to @blog, notice: 'Blog was successfully created.' }
-        format.json { render :show, status: :created, location: @blog }
+        # redirect browser to the @blog show page, same as blog_path(@blog)
+        format.html { redirect_to @blog, notice: 'Your blog is now live' }
       else
         format.html { render :new }
-        format.json { render json: @blog.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -43,10 +42,8 @@ class BlogsController < ApplicationController
     respond_to do |format|
       if @blog.update(blog_params)
         format.html { redirect_to @blog, notice: 'Blog was successfully updated.' }
-        format.json { render :show, status: :ok, location: @blog }
       else
         format.html { render :edit }
-        format.json { render json: @blog.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -56,7 +53,7 @@ class BlogsController < ApplicationController
   def destroy
     @blog.destroy
     respond_to do |format|
-      format.html { redirect_to blogs_url, notice: 'Blog was successfully destroyed.' }
+      format.html { redirect_to blogs_url, notice: 'Blog was successfully removed.' }
       format.json { head :no_content }
     end
   end
@@ -68,7 +65,7 @@ class BlogsController < ApplicationController
     end
 
     # Only allow a list of trusted parameters through.
-    def blog_params
+    def blog_params # makes the form available to update and create methods
       params.require(:blog).permit(:title, :body)
     end
 end
