@@ -29,7 +29,7 @@ class BlogsController < ApplicationController
     respond_to do |format|
       if @blog.save
         # redirect browser to the @blog show page, same as blog_path(@blog)
-        format.html { redirect_to @blog, notice: 'Your blog is now live' }
+        format.html { redirect_to @blog, notice: 'Your post is now live!' }
       else
         format.html { render :new }
       end
@@ -65,7 +65,7 @@ class BlogsController < ApplicationController
     end
 
     # Only allow a list of trusted parameters through.
-    def blog_params # makes the form available to update and create methods
+    def blog_params # makes what has been submitted to the form available to update and create methods
       params.require(:blog).permit(:title, :body)
     end
 end

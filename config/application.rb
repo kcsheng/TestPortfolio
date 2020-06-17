@@ -1,4 +1,4 @@
-require_relative 'boot'
+require_relative 'boot' # the main application file
 
 require "rails"
 # Pick the frameworks you want:
