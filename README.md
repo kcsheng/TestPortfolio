@@ -1,20 +1,13 @@
-# README
+#### TestPortfolio
+
+> This is  a Ruby on Rails 6 application that allows users to create their own portfolios.
+
+#### Features
+- real time chat engine for comments
+- blog
+- portfolio
+- drag and drop interface
 
 
-* Ruby version: 2.7.1
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
 
 
