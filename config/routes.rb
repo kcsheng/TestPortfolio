@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :portfolios, except: [:show] 
-  # change display of portfolios/id to portfolio/id
+  # customise display of portfolios/id to portfolio/id
   get "portfolio/:id", to: "portfolios#show", as: "portfolio_show"
   
   # customised-originally: get "pages/about"  
