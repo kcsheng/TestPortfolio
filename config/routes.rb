@@ -11,5 +11,9 @@ Rails.application.routes.draw do
   root to: "pages#home" # move the home page to root, not the server welcome page
   # use rails routes for any changes in routes.rb in config
 
-  resources :blogs
+  resources :blogs do
+    member do
+      get :toggle_status
+    end
+  end
 end
