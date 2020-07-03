@@ -1,5 +1,7 @@
 class Portfolio < ApplicationRecord
   has_many :technologies
+  accepts_nested_attributes_for :technologies,
+                                reject_if: lambda { |attrs| attrs["name"].blank? }
   include Placeholder
   validates_presence_of :title, :body, :main_image, :thumb_image
 
@@ -9,7 +11,7 @@ class Portfolio < ApplicationRecord
   end 
 
   # rails way of custom scope, using lambda
-  # scope :ruby_on_rails_portfolio_items, -> { where(subtitle: "Ruby on Rails") }
+  scope :ruby_on_rails_portfolio_items, -> { where(subtitle: "Ruby on Rails") }
 
   # another way of implementing custom routes with changeable default value
   # After a new portfolio item is initialised, add image by default 
