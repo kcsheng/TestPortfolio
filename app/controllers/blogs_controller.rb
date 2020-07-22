@@ -75,6 +75,6 @@ class BlogsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def blog_params # makes what has been submitted to the form available to update and create methods
-      params.require(:blog).permit(:title, :body)
+      params.require(:blog)
     end
 end
