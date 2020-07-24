@@ -4,12 +4,15 @@ class BlogsController < ApplicationController
   # GET /blogs
   # GET /blogs.json
   def index
-    @blogs = Blog.all # This is the index action, also tried limit(1)
+    @blogs = Blog.all 
+    @page_title = "Portfolio Blogs"
   end
 
   # GET /blogs/1
   # GET /blogs/1.json
-  def show # it is in before action, links to the set_blog call for dry code, central organisation in case there is a change
+  def show 
+    @page_title = @blog.title
+    @seo_keywords = @blog.body
   end
 
   # GET /blogs/new
