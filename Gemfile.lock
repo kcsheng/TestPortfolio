@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/kcsheng/kcs_view_tool
+  revision: baf2fade8b59514538aa963c76a51211e0160dce
+  specs:
+    kcs_view_tool (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -216,6 +222,7 @@ DEPENDENCIES
   friendly_id (~> 5.3)
   jbuilder (~> 2.7)
   jquery-rails
+  kcs_view_tool!
   listen (~> 3.2)
   pg (>= 0.18, < 2.0)
   pry-byebug
