@@ -52,3 +52,4 @@ gem 'bootstrap', '~> 4.5.0'
 gem 'jquery-rails'
 
 gem 'kcs_view_tool', '~> 0.1.0'
+gem 'petergate', '~> 2.0', '>= 2.0.1'
