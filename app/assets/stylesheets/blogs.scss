@@ -1,10 +1,10 @@
 @import "bootstrap";
-
+@import "font-awesome";
 /*
  * Globals
  */
 
- @media (min-width: 48em) {
+@media (min-width: 48em) {
   html {
     font-size: 18px;
   }
@@ -166,3 +166,11 @@ h6, .h6 {
 .blog-footer p:last-child {
   margin-bottom: 0;
 }
+
+/*
+ * custom styles
+ */
+
+ .social-links li {
+   font-size: 2em;
+ }
