@@ -9,11 +9,12 @@ require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
 
-//= require jquery3
-//= require popper
-//= require bootstrap-sprockets
-//= require jquery-ui
+require ("jquery")
+require ("jquery-ui")
 
+$(function(){
+  $('.sortable').sortable();
+});
 require("custom/html.sortable")
 
 // Uncomment to copy all static images under ../images to the output folder and reference
