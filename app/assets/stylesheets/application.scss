@@ -1,4 +1,5 @@
 @import "bootstrap/scss/bootstrap";
+@import "gritter";
 
 /*
  * Globals
@@ -209,4 +210,10 @@ body {
   color: white;
 }
 
+.gritter {
+  background-color: green;
+  border-radius: 5px;
+  text-align: center;
+  border: 1px solid white;
+}
 
